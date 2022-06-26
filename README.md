@@ -1,4 +1,4 @@
-![Coverage Badge](https://img.shields.io/endpoint?url=https://gist.githubusercontent.com/im-Amitto/bd05d63d439573472355d21e7b274e08/raw/lummo__pull_2.json)
+![Coverage Badge](https://img.shields.io/endpoint?url=https://gist.githubusercontent.com/im-Amitto/bd05d63d439573472355d21e7b274e08/raw/lummo__heads_main.json)
 
 ## Architecture - K8s
 > Redis uses a persistent volume so even on restart or crash, the data will not be lost  

@@ -6,7 +6,7 @@ services:
     dev:
         image: meamyth/kraken-dev
         build:
-            context: .
+            context: ./kraken/
             target: development
             dockerfile: ./Dockerfile
         command: npm run start:debug
@@ -28,7 +28,7 @@ services:
     prod:
         image: meamyth/kraken-prod
         build:
-            context: .
+            context: ./kraken/
             target: production
             dockerfile: ./Dockerfile
         command: npm run start:prod

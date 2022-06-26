@@ -4,7 +4,7 @@ import prodConf from './config/prod';
 import { ConfigModule, ConfigService } from '@nestjs/config';
 import { RedisModule } from '@liaoliaots/nestjs-redis';
 import { makeCounterProvider, PrometheusModule, makeHistogramProvider } from "@willsoto/nestjs-prometheus";
-import { LatencyMiddleware } from './services/latency.middleware';
+import { LatencyMiddleware } from './latency.middleware';
 
 @Module({
   imports: [
