@@ -2,10 +2,8 @@ version: '3.8'
 
 services:
     redis:
-        container_name: redis
         image: redis:5
     dev:
-        container_name: kraken_api_dev
         image: meamyth/kraken-dev
         build:
             context: .
@@ -16,7 +14,7 @@ services:
             - 3000:5000
             - 9229:9229
         volumes:
-            - .:/usr/src/app
+            - ./kraken/.:/usr/src/app
             - /usr/src/app/node_modules
         environment:
             REDIS_HOST: redis
@@ -28,7 +26,6 @@ services:
         depends_on:
         - redis
     prod:
-        container_name: kraken_api_prod
         image: meamyth/kraken-prod
         build:
             context: .
@@ -38,7 +35,7 @@ services:
         ports:
             - 3001:5000
         volumes:
-            - .:/usr/src/app
+            - ./kraken/.:/usr/src/app
             - /usr/src/app/node_modules
         environment:
             REDIS_HOST: redis
