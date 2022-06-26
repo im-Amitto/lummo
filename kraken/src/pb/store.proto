@@ -11,7 +11,7 @@ service StoreService {
 
 message Item {
     string key = 1;
-    string value = 2;
+    int32 value = 2;
 }
 
 message ItemKey {
