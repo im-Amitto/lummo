@@ -1,0 +1,32 @@
+name: Kraken CI
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+      - name: Use Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '16.x'
+      - name: Install dependencies
+        run: npm ci
+        working-directory: ./kraken
+      - name: Start Redis
+        uses: supercharge/redis-github-action@1.4.0
+        with:
+          redis-version: '4.0'
+      - run: npm run test
+        working-directory: ./kraken
+        env:
+          NODE_ENV: CI
+          REDIS_CI_HOST: localhost
+          REDIS_CI_PORT: 6379
