@@ -26,6 +26,7 @@
     "@nestjs/config": "^2.1.0",
     "@nestjs/core": "^8.0.0",
     "@nestjs/platform-express": "^8.0.0",
+    "@willsoto/nestjs-prometheus": "^4.6.0",
     "controller": "^1.0.0",
     "i": "^0.3.7",
     "js-yaml": "^4.1.0",

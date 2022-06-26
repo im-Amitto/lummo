@@ -1,18 +1,25 @@
 import { Injectable } from '@nestjs/common';
+import { Counter } from "prom-client";
 import { FindKey, Item, ItemKey, FindKey_FindType } from './../../pb/store';
 import { RedisService } from '@liaoliaots/nestjs-redis';
 import Redis from 'ioredis';
+import { InjectMetric } from '@willsoto/nestjs-prometheus';
 
 @Injectable()
 export class StoreService {
     private redisClient: Redis;
     constructor(
         private readonly redisService: RedisService,
+        @InjectMetric("entries_in_db") public counter: Counter<string>
     ) {
         this.redisClient = redisService.getClient();
     }
     async setKey(item: Item) {
-        await this.redisService.clients
+        var value: string = await this.redisClient.get(item.key);
+        // Increment counter only if a new key, value is received
+        if(!value){
+            this.counter.inc();
+        }
         await this.redisClient.set(item.key, item.value);
     }
 
