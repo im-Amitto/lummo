@@ -2,6 +2,8 @@
   <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="200" alt="Nest Logo" /></a>
 </p>
 
+![Coverage Badge](https://img.shields.io/endpoint?url=https://gist.githubusercontent.com/im-Amitto/bd05d63d439573472355d21e7b274e08/raw/lummo__pull_2.json)
+
 [circleci-image]: https://img.shields.io/circleci/build/github/nestjs/nest/master?token=abc123def456
 [circleci-url]: https://circleci.com/gh/nestjs/nest
 
