@@ -31,6 +31,7 @@ jobs:
           REDIS_CI_HOST: localhost
           REDIS_CI_PORT: 6379
       - name: Get Coverage for badge
+        working-directory: ./kraken
         run: |
           # var SUMMARY = [
           #   '',
