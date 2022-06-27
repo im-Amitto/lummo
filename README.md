@@ -1,5 +1,7 @@
 ![Coverage Badge](https://img.shields.io/endpoint?url=https://gist.githubusercontent.com/im-Amitto/bd05d63d439573472355d21e7b274e08/raw/lummo__heads_main.json)
 
+> GCP deployment is down due to `billing` issue
+
 # Welcome to my first Nest.js project
 
 Live @ [http://35.244.39.245](http://35.244.39.245/api/) 
