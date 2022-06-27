@@ -8,4 +8,4 @@ spec:
   capacity:
     storage: 100Mi
   hostPath:
-    path: /data/
+    path: /var/lib/data

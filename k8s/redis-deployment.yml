@@ -17,8 +17,15 @@ spec:
         name: redis
         volumeMounts:
         - name: "redis-dir"
-          mountPath: "/data"
+          mountPath: "/var/lib/data"
           readOnly: false
+        resources:
+          limits:
+            cpu: 200m
+            memory: 500Mi
+          requests:
+            cpu: 100m
+            memory: 200Mi
       volumes:
       - name: "redis-dir"
         persistentVolumeClaim:

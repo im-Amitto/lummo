@@ -17,6 +17,13 @@ spec:
           image: meamyth/kraken-prod
           ports:
             - containerPort: 5000
+          resources:
+            limits:
+              cpu: 200m
+              memory: 500Mi
+            requests:
+              cpu: 100m
+              memory: 200Mi
           env:
             - name: REDIS_HOST
               value: redis-service
